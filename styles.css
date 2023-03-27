@@ -153,7 +153,6 @@ html {
 @media (max-width: 480px) {
   .home-background-img {
     background-size: 220%;
-    animation: pan-img-mobile 30s linear infinite;
   } 
   .home-background-img-2 {
     background-size: 220%;
