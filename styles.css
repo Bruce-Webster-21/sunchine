@@ -95,60 +95,6 @@ html {
   animation: pan-img 30s linear infinite;
 }
 
-@keyframes pan-img {
-  0% {
-    background-position: 30% 30%;
-    background-size: 120%;
-  }
-  
-  25% {
-    background-position: 40% 40%;
-    background-size: 110%;
-  }
-
-  50% {
-    background-position: 50% 50%;
-    background-size: 100%;
-  }
-
-  75% {
-    background-position: 40% 40%;
-    background-size: 110%;
-  }
-
-  100% {
-    background-position: 30% 30%;
-    background-size: 120%;
-  }
-}
-
-@keyframes pan-img-mobile {
-  0% {
-    background-position: 0% 30%;
-    background-size: 220%;
-  }
-  
-  25% {
-    background-position: 10% 40%;
-    background-size: 230%;
-  }
-
-  50% {
-    background-position: 20% 50%;
-    background-size: 240%;
-  }
-
-  75% {
-    background-position: 10% 40%;
-    background-size: 230%;
-  }
-
-  100% {
-    background-position: 0% 30%;
-    background-size: 220%;
-  }
-}
-
 @media (max-width: 480px) {
   .home-background-img {
     background-size: 220%;
