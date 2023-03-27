@@ -82,7 +82,6 @@ html {
   -webkit-background-size: 120%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  animation: pan-img 30s linear infinite;
 }
 
 .home-background-img-2 {
