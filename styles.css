@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #dfedfd;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* NAV MENU */
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.navigator {
+  padding-bottom: 10px;
+  width: 100%;
+  position: fixed;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.navigator .nav-menu {
+  margin: 0 30px 0 0;
+}
+
+.logo-container {
+  display: flex;
+  z-index: 1;
+}
+
+.logo-txt {
+  color: white;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin: auto 0 auto 10px;
+  padding: 10px 0 0 0;
+  z-index: 1;
+}
+
+.smaller-logo-txt {
+  font-size: 12px;
+  margin: -5px 0 0 0;
+  color: #019ACD;
+}
+
+.logo {
+  padding: 15px 0 0 15px;
+  width: 100px;
+}
+.navigator .nav-menu {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.navigator .nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 10px 0 10px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ANIMATED BACKGROUNDS */
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.home-background-img {
+  background-image: url(/img/model.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: pan-img 30s linear infinite;
+}
+
+.home-background-img-2 {
+  background-image: url(/img/model4.jpg);
+  width: 100%;
+  height: 250px;
+  background-size: 100%;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: pan-img 30s linear infinite;
+}
+
+@keyframes pan-img {
+  0% {
+    background-position: 30% 30%;
+    background-size: 120%;
+  }
+  
+  25% {
+    background-position: 40% 40%;
+    background-size: 110%;
+  }
+
+  50% {
+    background-position: 50% 50%;
+    background-size: 100%;
+  }
+
+  75% {
+    background-position: 40% 40%;
+    background-size: 110%;
+  }
+
+  100% {
+    background-position: 30% 30%;
+    background-size: 120%;
+  }
+}
+
+@keyframes pan-img-mobile {
+  0% {
+    background-position: 0% 30%;
+    background-size: 220%;
+  }
+  
+  25% {
+    background-position: 10% 40%;
+    background-size: 230%;
+  }
+
+  50% {
+    background-position: 20% 50%;
+    background-size: 240%;
+  }
+
+  75% {
+    background-position: 10% 40%;
+    background-size: 230%;
+  }
+
+  100% {
+    background-position: 0% 30%;
+    background-size: 220%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-background-img {
+    background-size: 220%;
+    animation: pan-img-mobile 30s linear infinite;
+  } 
+  .home-background-img-2 {
+    background-size: 220%;
+    animation: pan-img-mobile 30s linear infinite;
+  } 
+}
+
+.contact-us-btn {
+  position: absolute;
+  color: white;
+  background-color: #0189b6;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 15px 35px;
+  margin: 50px;
+  bottom: 0;
+  right: 0;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* HAMBURGER MENU */
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 769px) {
+  .navigator .nav-menu {
+    display: none;
+  }
+}
+.hamburger {
+  display: block;
+  z-index: 1;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.hamburger {
+  cursor: pointer;
+  margin: 40px 20px 0 0;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 7px auto;
+  transition: all 1s ease;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.nav-menu-mobile {
+  position: fixed;
+  background-color: #0c0d186e;
+  bottom: 100%;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  transition: 1s;
+}
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  padding: 20px 0 0 20px;
+}
+.nav-link:nth-child(1) {
+  margin-top: 100px;
+}
+.nav-menu-mobile.active {
+  bottom: 0%;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    width: 100%;
+  }
+  .nav-menu.active {
+    left: 0%;
+  }
+}
+@media (min-width: 770px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ABOUT US SECTION */
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#about-us h2 {
+  color: #005464;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  font-size: 30px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+#about-us p {
+  color: #005464;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 19px;
+  max-width: 1000px;
+  padding: 0 30px;
+  text-align: justify;
+  margin: 0 auto 40px auto;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* PACKAGE SECTION */
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.package-container {
+  display: flex;
+  justify-content: center;
+}
+
+.blue-bg {
+  background-color: #008099;
+}
+
+.blue-bg h2 {
+  text-align: center;
+  color: #005464;
+  padding: 40px 0;
+  font-size: 30px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.package {
+  margin: 0 25px 50px 25px;
+  max-width: 310px;
+  height: 100%;
+  background-color: #004d66e7;
+  border-radius: 25px;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.package h3 {
+  font-size: 30px;
+  margin: 40px 0 20px 0;
+  color: #5be4ff;
+  text-align: center;
+}
+
+.package ul li {
+  margin: 0 40px 5px 40px;
+  font-size: 14px;
+}
+
+.package ul li {
+  color: #5be4ff;
+}
+
+.package a {
+  display: flex;
+  justify-content: center;
+  background-color: #5be4ff;
+  padding: 15px 40px;
+  border-radius: 15px;
+  margin: 40px 20px 20px 20px;
+}
+
+@media (max-width: 769px) {
+  .package-container {
+    flex-direction: column;
+  }
+  .package {
+    margin: 0px auto 40px auto;
+    max-width: 360px;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* FOOTER */
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
